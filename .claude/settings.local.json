@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"team.jpg.JPG\" \"team.jpg\")",
+      "Bash(mv \"Celebrate.jpg.JPG\" \"Celebrate.jpg\")",
+      "Bash(mv \"actionPB.jpg.JPG\" \"actionPB.jpg\")",
+      "Bash(mv \"headshot.jpg.JPG\" \"headshot.jpg\")",
+      "Bash(mv \"cross.jpg.JPG\" \"cross.jpg\")"
+    ]
+  }
+}
