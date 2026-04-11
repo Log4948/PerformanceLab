@@ -97,32 +97,18 @@ h2.section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.
 .story-lead strong { color: var(--text); font-weight: 500; }
 .photo-row { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.25rem; margin-bottom: 3rem; }
 .photo-row img { width: 100%; border-radius: 14px; object-fit: cover; display: block; height: 320px; }
+.story-lesson { max-width: 680px; margin-top: 3rem; }
+.story-lesson p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; font-weight: 300; margin-top: 0.5rem; }
 
-.timeline { display: flex; flex-direction: column; }
-.tl-item { display: grid; grid-template-columns: auto 1fr; gap: 0 1.5rem; padding-bottom: 2.25rem; }
-.tl-left { display: flex; flex-direction: column; align-items: center; }
-.tl-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--gold); border: 2px solid white; outline: 2px solid var(--gold); flex-shrink: 0; margin-top: 0.3rem; }
-.tl-line { width: 1px; background: var(--light-border); flex: 1; margin-top: 0.5rem; }
-.tl-item:last-child .tl-line { display: none; }
-.tl-label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
-.tl-item h3 { font-family: var(--font-display); font-size: 1.15rem; color: var(--navy); margin-bottom: 0.4rem; }
-.tl-item p { color: var(--muted); font-size: 0.9rem; line-height: 1.75; font-weight: 300; }
-
-/* PHOTO BREAK */
-.photo-break { background: var(--cream); padding: 2.5rem 5%; }
-.photo-break-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
-.photo-break-inner img { width: 100%; height: 260px; object-fit: cover; border-radius: 12px; display: block; }
-
-/* OFFER */
-.offer-section { background: white; }
-.offer-inner { max-width: 1100px; margin: 0 auto; }
-.offer-intro { color: var(--muted); font-size: 0.95rem; max-width: 480px; margin-bottom: 2.5rem; font-weight: 300; line-height: 1.75; }
-.offer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; }
-.offer-card { background: var(--cream); border-radius: 14px; padding: 1.5rem; border: 1px solid var(--light-border); transition: border-color 0.2s, transform 0.2s; }
-.offer-card:hover { border-color: var(--gold); transform: translateY(-3px); }
-.offer-num { font-family: var(--font-display); font-size: 1.5rem; color: var(--gold); margin-bottom: 0.6rem; line-height: 1; }
-.offer-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.5rem; }
-.offer-card p { color: var(--muted); font-size: 0.85rem; line-height: 1.65; font-weight: 300; }
+/* BOOKS */
+.books-section { background: white; }
+.books-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+.books-intro { color: var(--muted); font-size: 0.95rem; max-width: 500px; margin: 0 auto 3rem; font-weight: 300; line-height: 1.75; }
+.books-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; justify-items: center; }
+.book-card { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; }
+.book-card img { width: 160px; border-radius: 6px; box-shadow: 0 8px 30px rgba(26,39,68,0.15); display: block; }
+.book-title { font-weight: 600; font-size: 0.9rem; color: var(--navy); text-align: center; line-height: 1.4; max-width: 160px; }
+.book-author { font-size: 0.82rem; color: var(--muted); font-weight: 300; }
 
 /* MISSION */
 .mission-banner { background: var(--navy); padding: 4.5rem 5%; text-align: center; }
@@ -141,7 +127,7 @@ footer p { color: var(--muted); font-size: 0.8rem; }
 
 @media (max-width: 768px) {
   .hero, .problem-inner, .story-top { grid-template-columns: 1fr; gap: 2rem; }
-  .photo-row, .photo-break-inner, .offer-grid { grid-template-columns: 1fr; }
+  .photo-row, .books-grid { grid-template-columns: 1fr; }
   .hero-credential { position: relative; bottom: auto; left: auto; margin-top: 1rem; }
 }
 </style>
@@ -169,10 +155,6 @@ footer p { color: var(--muted); font-size: 0.8rem; }
   </div>
   <div class="hero-img-wrap">
     <img src="images/LetterRings.jpg" alt="Performance Lab coach" class="hero-img">
-    <div class="hero-credential">
-      <div class="cred-num">20% → 90%</div>
-      <div class="cred-label">Competition hit rate improvement<br>through mental training</div>
-    </div>
   </div>
 </div>
 </div>
@@ -205,9 +187,9 @@ footer p { color: var(--muted); font-size: 0.8rem; }
         <h2 class="section-title">Michigan Gymnast.<br>All-American.<br>National Champion.</h2>
       </div>
       <p class="story-lead">
-        I walked on at the University of Michigan — one of the most competitive gymnastics programs in the country — and earned my spot. I went on to become an All-American, compete in the biggest moments, and be part of a team that won multiple Big Ten titles and a national championship.
+        I walked on at the University of Michigan and earned my spot. I went on to become an All-American, compete in the biggest moments, and be part of a team that won multiple Big Ten titles and a national championship.
         <br><br>
-        <strong>None of that happened because of raw talent. It happened because I learned to train my mind as seriously as my body.</strong>
+        At Michigan I was able to unlock high-level mental training which allowed me to compete with Olympic-level athletes on my events.
       </p>
     </div>
 
@@ -216,80 +198,34 @@ footer p { color: var(--muted); font-size: 0.8rem; }
       <img src="images/team.jpg" alt="Michigan gymnastics team" style="object-position: center top;">
     </div>
 
-    <div class="timeline">
-      <div class="tl-item">
-        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
-        <div>
-          <div class="tl-label">The turning point</div>
-          <h3>From 20% to 90% — Without Changing a Single Skill</h3>
-          <p>I was talented but unreliable — great in practice, inconsistent when it counted. My competition hit rate sat around 20%. I started working with a sports therapist and treating my mental game as a daily practice. Within a year, that number climbed to 90%. I was a different competitor. Nothing about my physical training had changed.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
-        <div>
-          <div class="tl-label">The process</div>
-          <h3>Building the Mental Toolkit That Held at Michigan</h3>
-          <p>Pre-competition protocols. Reset routines. Pressure inoculation. Self-talk systems. I studied the best — The Inner Game of Tennis, The Confident Mind, The Mind of an Athlete — and applied everything in real competition. I worked alongside Michigan's sports psychologists throughout my college career, refining what actually works when the pressure is real and the stakes are high.</p>
-        </div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-left"><div class="tl-dot"></div><div class="tl-line"></div></div>
-        <div>
-          <div class="tl-label">The lesson</div>
-          <h3>Mindset Separated the Greats. Every Time.</h3>
-          <p>Training alongside elite athletes at Michigan made one thing clear: the ones who reached their ceiling weren't always the most gifted. They were the ones who could perform under pressure, reset after mistakes, and build on success. That's trainable. That's exactly what I teach.</p>
-        </div>
-      </div>
+    <div class="story-lesson">
+      <div class="section-tag">Road to Success</div>
+      <p>Training alongside elite athletes at Michigan made one thing clear: success is a complicated recipe. Talent, health, timing all need to align. But the ones who reached their ceiling weren't always the most gifted — they were the ones who trained their mind to optimise these ingredients.</p>
     </div>
   </div>
 </section>
 
-<!-- PHOTO BREAK -->
-<div class="photo-break">
-  <div class="photo-break-inner">
-    <img src="images/cross.jpg" alt="Competition moment" style="object-position: center;">
-    <img src="images/Celebrate.jpg" alt="Championship celebration" style="object-position: center top;">
-    <img src="images/headshot.jpg" alt="US Gymnastics Championships" style="object-position: top;">
-  </div>
-</div>
-
-<!-- OFFER -->
-<section class="offer-section" id="offer">
-  <div class="offer-inner">
-    <div class="section-tag">What We Work On</div>
-    <h2 class="section-title">The Mental Toolkit</h2>
-    <p class="offer-intro">The same skills I built and used throughout my career — now taught in a structured, practical way so athletes can apply them from day one.</p>
-    <div class="offer-grid">
-      <div class="offer-card">
-        <div class="offer-num">01</div>
-        <h3>Pre-Competition Routines</h3>
-        <p>A reliable mental warm-up that gets you focused every time — not just when you feel good.</p>
+<!-- BOOKS -->
+<section class="books-section" id="coaching">
+  <div class="books-inner">
+    <div class="section-tag">The Foundation</div>
+    <h2 class="section-title">What I Built On</h2>
+    <p class="books-intro">The books that shaped the mental framework I used throughout my career — and teach today.</p>
+    <div class="books-grid">
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/isbn/0679778314-L.jpg" alt="The Inner Game of Tennis">
+        <div class="book-title">The Inner Game of Tennis</div>
+        <div class="book-author">W. Timothy Gallwey</div>
       </div>
-      <div class="offer-card">
-        <div class="offer-num">02</div>
-        <h3>Pressure Inoculation</h3>
-        <p>Train under simulated pressure so the real moment feels familiar — not threatening.</p>
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/isbn/0062947125-L.jpg" alt="It Takes What It Takes">
+        <div class="book-title">It Takes What It Takes</div>
+        <div class="book-author">Trevor Moawad</div>
       </div>
-      <div class="offer-card">
-        <div class="offer-num">03</div>
-        <h3>Reset and Refocus</h3>
-        <p>Process mistakes quickly and come back stronger on the very next rep.</p>
-      </div>
-      <div class="offer-card">
-        <div class="offer-num">04</div>
-        <h3>Self-Talk and Inner Dialogue</h3>
-        <p>Identify the internal voice working against you and replace it with one that performs.</p>
-      </div>
-      <div class="offer-card">
-        <div class="offer-num">05</div>
-        <h3>Competition Mindset</h3>
-        <p>Build the identity of a competitor — someone who rises when the stakes are highest.</p>
-      </div>
-      <div class="offer-card">
-        <div class="offer-num">06</div>
-        <h3>Consistent Output</h3>
-        <p>Close the gap between your practice self and your competition self — and keep it closed.</p>
+      <div class="book-card">
+        <img src="https://covers.openlibrary.org/b/isbn/0063014831-L.jpg" alt="The Confident Mind">
+        <div class="book-title">The Confident Mind</div>
+        <div class="book-author">Nate Zinsser</div>
       </div>
     </div>
   </div>
@@ -297,7 +233,7 @@ footer p { color: var(--muted); font-size: 0.8rem; }
 
 <!-- MISSION -->
 <section class="mission-banner">
-  <blockquote>"To unlock the competitor already inside every athlete — giving them the mental tools to perform when the pressure is highest, because the one thing separating good from great isn't talent. It's mindset."</blockquote>
+  <blockquote>"To unlock the competitor already inside every athlete — giving them the mental tools to perform when the pressure is highest."</blockquote>
   <p>The Performance Lab Mission</p>
 </section>
 
