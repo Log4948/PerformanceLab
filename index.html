@@ -110,6 +110,56 @@ h2.section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.
 .book-title { font-weight: 600; font-size: 0.9rem; color: var(--navy); text-align: center; line-height: 1.4; max-width: 160px; }
 .book-author { font-size: 0.82rem; color: var(--muted); font-weight: 300; }
 
+/* PRICING */
+.pricing-section { background: var(--cream); }
+.pricing-inner { max-width: 1000px; margin: 0 auto; text-align: center; }
+.pricing-intro { color: var(--muted); font-size: 0.95rem; max-width: 480px; margin: 0 auto 3rem; font-weight: 300; line-height: 1.75; }
+.pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: left; }
+.price-card {
+  background: white; border-radius: 18px; padding: 2rem 1.75rem;
+  border: 1px solid var(--light-border); display: flex; flex-direction: column; gap: 1rem;
+}
+.price-card.featured {
+  background: var(--navy); border-color: var(--navy);
+  transform: translateY(-8px); box-shadow: 0 20px 50px rgba(26,39,68,0.2);
+}
+.price-badge {
+  display: inline-block; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 0.3rem 0.85rem; border-radius: 100px;
+  background: var(--gold-pale); color: var(--gold);
+}
+.price-card.featured .price-badge { background: rgba(201,146,58,0.2); color: var(--gold-light); }
+.price-name { font-family: var(--font-display); font-size: 1.4rem; color: var(--navy); }
+.price-card.featured .price-name { color: white; }
+.price-amount { font-family: var(--font-display); font-size: 2.8rem; color: var(--navy); line-height: 1; }
+.price-amount span { font-family: var(--font-body); font-size: 1rem; font-weight: 400; color: var(--muted); }
+.price-card.featured .price-amount { color: white; }
+.price-card.featured .price-amount span { color: rgba(255,255,255,0.5); }
+.price-savings { font-size: 0.8rem; font-weight: 600; color: var(--gold); }
+.price-card.featured .price-savings { color: var(--gold-light); }
+.price-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.65; font-weight: 300; }
+.price-card.featured .price-desc { color: rgba(255,255,255,0.55); }
+.price-divider { border: none; border-top: 1px solid var(--light-border); }
+.price-card.featured .price-divider { border-color: rgba(255,255,255,0.12); }
+.price-features { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.price-features li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.88rem; color: var(--muted); font-weight: 300; }
+.price-card.featured .price-features li { color: rgba(255,255,255,0.7); }
+.price-check { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+.price-card.featured .price-check { color: var(--gold-light); }
+.price-cta {
+  margin-top: auto; display: block; text-align: center;
+  padding: 0.8rem 1.5rem; border-radius: 100px; font-size: 0.9rem; font-weight: 600;
+  text-decoration: none; transition: background 0.2s, transform 0.15s;
+  background: var(--gold-pale); color: var(--gold); border: 1px solid rgba(201,146,58,0.25);
+}
+.price-cta:hover { background: var(--gold); color: white; transform: translateY(-2px); }
+.price-card.featured .price-cta { background: var(--gold); color: white; border-color: var(--gold); }
+.price-card.featured .price-cta:hover { background: var(--gold-light); }
+.pricing-note { margin-top: 2.5rem; font-size: 0.85rem; color: var(--muted); font-weight: 300; }
+.pricing-note a { color: var(--gold); text-decoration: none; font-weight: 500; }
+.pricing-note a:hover { text-decoration: underline; }
+@media (max-width: 768px) { .pricing-grid { grid-template-columns: 1fr; } .price-card.featured { transform: none; } }
+
 /* MISSION */
 .mission-banner { background: var(--navy); padding: 4.5rem 5%; text-align: center; }
 .mission-banner blockquote { font-family: var(--font-display); font-size: clamp(1.3rem, 2.8vw, 2rem); color: white; max-width: 760px; margin: 0 auto 1rem; line-height: 1.45; font-style: italic; }
@@ -126,6 +176,9 @@ h2.section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.
   text-decoration: none; border: 2px solid var(--navy); transition: background 0.2s, color 0.2s, transform 0.15s;
 }
 .btn-secondary:hover { background: var(--navy); color: white; transform: translateY(-2px); }
+.cta-contact { margin-top: 2.5rem; display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; }
+.cta-contact a { color: var(--muted); font-size: 0.9rem; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+.cta-contact a:hover { color: var(--navy); }
 
 footer { border-top: 1px solid var(--light-border); padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; background: white; }
 .footer-logo { font-family: var(--font-display); font-size: 1.1rem; color: var(--navy); }
@@ -146,6 +199,7 @@ footer p { color: var(--muted); font-size: 0.8rem; }
   <div class="nav-links">
     <a href="#story">My Story</a>
     <a href="#coaching">Coaching</a>
+    <a href="#pricing">Pricing</a>
     <a href="#contact" class="btn-nav">Book a Session</a>
   </div>
 </nav>
@@ -238,6 +292,68 @@ footer p { color: var(--muted); font-size: 0.8rem; }
   </div>
 </section>
 
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="pricing-inner">
+    <div class="section-tag">Investment</div>
+    <h2 class="section-title">Simple, Transparent Pricing</h2>
+    <p class="pricing-intro">Every option includes personalized, 1-on-1 coaching. Choose what fits where you are right now.</p>
+    <div class="pricing-grid">
+
+      <!-- Drop-In -->
+      <div class="price-card">
+        <div class="price-badge">Single Session</div>
+        <div class="price-name">Drop-In</div>
+        <div class="price-amount">$65 <span>/ session</span></div>
+        <p class="price-desc">One focused session to work on a specific challenge or get a feel for the process.</p>
+        <hr class="price-divider">
+        <ul class="price-features">
+          <li><span class="price-check">✓</span> 30-minute 1-on-1 session</li>
+          <li><span class="price-check">✓</span> Targeted mental skill work</li>
+          <li><span class="price-check">✓</span> No commitment required</li>
+        </ul>
+        <a href="https://calendly.com/logan-m-mckeown/30-minute-discovery-call-clone" class="price-cta" target="_blank">Book a Session →</a>
+      </div>
+
+      <!-- Starter Pack -->
+      <div class="price-card featured">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-name">Starter Pack</div>
+        <div class="price-amount">$235 <span>/ 4 sessions</span></div>
+        <div class="price-savings">Save $25 vs. drop-in rate</div>
+        <p class="price-desc">The best way to build real momentum. Four sessions give you enough time to learn, apply, and start seeing results.</p>
+        <hr class="price-divider">
+        <ul class="price-features">
+          <li><span class="price-check">✓</span> 4 × 30-minute sessions</li>
+          <li><span class="price-check">✓</span> Structured skill progression</li>
+          <li><span class="price-check">✓</span> Between-session support</li>
+          <li><span class="price-check">✓</span> Best value to start</li>
+        </ul>
+        <a href="https://calendly.com/logan-m-mckeown/30min" class="price-cta" target="_blank">Get Started →</a>
+      </div>
+
+      <!-- Performance Program -->
+      <div class="price-card">
+        <div class="price-badge">Full Program</div>
+        <div class="price-name">Performance Program</div>
+        <div class="price-amount">$440 <span>/ 8 sessions</span></div>
+        <div class="price-savings">Save $80 vs. drop-in rate</div>
+        <p class="price-desc">Full mental performance training. Build every skill from the ground up and go into competition with complete confidence.</p>
+        <hr class="price-divider">
+        <ul class="price-features">
+          <li><span class="price-check">✓</span> 8 × 30-minute sessions</li>
+          <li><span class="price-check">✓</span> Complete mental skills system</li>
+          <li><span class="price-check">✓</span> Competition prep & debriefs</li>
+          <li><span class="price-check">✓</span> Priority scheduling</li>
+        </ul>
+        <a href="https://calendly.com/logan-m-mckeown/30min" class="price-cta" target="_blank">Get Started →</a>
+      </div>
+
+    </div>
+    <p class="pricing-note">Not sure which is right for you? <a href="https://calendly.com/logan-m-mckeown/30min" target="_blank">Book a free discovery call</a> — no pressure, no commitment.</p>
+  </div>
+</section>
+
 <!-- MISSION -->
 <section class="mission-banner">
   <blockquote>"To unlock the competitor already inside every athlete — giving them the mental tools to perform when the pressure is highest."</blockquote>
@@ -251,12 +367,20 @@ footer p { color: var(--muted); font-size: 0.8rem; }
   <p>Choose a session below. Not sure which fits? Start with a free Discovery Call — we'll figure out the best path together.</p>
   <div class="cta-buttons">
     <a href="https://calendly.com/logan-m-mckeown/30min" class="btn-primary" target="_blank">Free Discovery Call →</a>
-    <a href="https://calendly.com/logan-m-mckeown/30-minute-discovery-call-clone" class="btn-secondary" target="_blank">PAD Session →</a>
+    <a href="https://calendly.com/logan-m-mckeown/30-minute-discovery-call-clone" class="btn-secondary" target="_blank">Book a Session →</a>
+  </div>
+  <div class="cta-contact">
+    <a href="tel:5128034707">📞 512-803-4707</a>
+    <a href="mailto:logan.m.mckeown@gmail.com">✉ logan.m.mckeown@gmail.com</a>
   </div>
 </section>
 
 <footer>
   <div class="footer-logo">Performance<span>Lab</span></div>
+  <div style="display:flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;">
+    <a href="tel:5128034707" style="color: var(--muted); font-size: 0.8rem; text-decoration: none;">512-803-4707</a>
+    <a href="mailto:logan.m.mckeown@gmail.com" style="color: var(--muted); font-size: 0.8rem; text-decoration: none;">logan.m.mckeown@gmail.com</a>
+  </div>
   <p>© 2026 Performance Lab. Mental Performance Coaching for Athletes.</p>
 </footer>
 
